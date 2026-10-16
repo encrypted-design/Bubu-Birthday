@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday 💖</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff1f5;--card:#fff;--ink:#4a2c3a;--pink:#ff6b9d;--head:#e0457f;--soft:#ffd6e5;--sh:0 8px 24px rgba(255,107,157,.25);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a1620;--card:#3a2030;--ink:#ffe6ef;--soft:#5a2f45;--sh:0 8px 24px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#2a1620;--card:#3a2030;--ink:#ffe6ef;--soft:#5a2f45;--sh:0 8px 24px rgba(0,0,0,.4)}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:Poppins,system-ui,sans-serif;overflow-x:hidden;text-align:center}
+section{padding:48px 18px;max-width:640px;margin:auto}
+h1,h2{font-family:Pacifico,cursive;font-weight:400;color:var(--head);margin:.3em 0}
+h1{font-size:2.3rem}h2{font-size:1.7rem}
+#intro{position:fixed;inset:0;display:grid;place-items:center;background:var(--bg);z-index:100;transition:opacity .7s}
+#intro.hide{opacity:0;pointer-events:none}
+#intro .env{font-size:5rem;animation:bob 1.6s ease-in-out infinite}
+button{font:600 1rem Poppins,sans-serif;background:var(--pink);color:#fff;border:0;border-radius:30px;padding:12px 26px;box-shadow:var(--sh);cursor:pointer}
+button:active{transform:scale(.96)}
+@keyframes bob{50%{transform:translateY(-10px)}}
+.bears{display:none;justify-content:center;align-items:flex-end;gap:6px;margin:28px 0 8px;transition:gap 1s}
+.sticker{display:block;width:min(220px,70vw);height:auto;margin:28px auto 8px;animation:stickerFloat 3s ease-in-out infinite}
+@keyframes stickerFloat{50%{transform:translateY(-8px) scale(1.02)}}
+.bears.hug{gap:-14px}
+.bw{display:flex;flex-direction:column;align-items:center;animation:bob 2.4s ease-in-out infinite}
+.bw:nth-child(2){animation-delay:.6s}
+.bw small{margin-top:14px;font-weight:600;color:var(--pink)}
+.bear{--fur:#b9824f;position:relative;width:104px;height:96px;border-radius:50%;background:var(--fur);margin-top:14px}
+.bear.w{--fur:#fffaf3;box-shadow:0 0 0 2px #e5d6c8}
+.bear::before,.bear::after{content:"";position:absolute;top:-12px;width:38px;height:38px;border-radius:50%;background:var(--fur);z-index:-1}
+.bear::before{left:-2px}.bear::after{right:-2px}
+.bear.w::before,.bear.w::after{box-shadow:0 0 0 2px #e5d6c8}
+.bear i{position:absolute;display:block}
+.e{top:38px;width:10px;height:13px;background:#2b1b1b;border-radius:50%;animation:blink 4s infinite}
+.e.l{left:28px}.e.r{right:28px}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+.m{top:50px;left:50%;width:44px;height:32px;margin-left:-22px;background:#f6dcc0;border-radius:50%}
+.n{top:50px;left:50%;width:14px;height:9px;margin-left:-7px;background:#2b1b1b;border-radius:50% 50% 60% 60%}
+.c{top:58px;width:16px;height:10px;background:#ff8fb1;opacity:.65;border-radius:50%}
+.c.l{left:8px}.c.r{right:8px}
+.sub{min-height:1.6em;opacity:.85}
+.jump{animation:hop .9s ease-in-out infinite}
+@keyframes hop{0%,100%{transform:translateY(0)}40%{transform:translateY(-18px)}}
+.mc{position:absolute;left:50%;bottom:-42px;margin-left:-32px;width:64px;height:32px;background:#ff8fb8;border-radius:8px;z-index:2}
+.mc::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:#fff;border-radius:8px 8px 6px 6px}
+.mc b{position:absolute;left:50%;top:-16px;margin-left:-3px;width:6px;height:16px;background:#fff;border-radius:2px}
+.mc b::before{content:"";position:absolute;top:-13px;left:-2px;width:10px;height:14px;background:radial-gradient(#fff6a8,#ffb300);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;animation:fk .35s infinite alternate}
+.hd{position:absolute;bottom:-34px;width:22px;height:22px;border-radius:50%;background:var(--fur);z-index:3}
+.hd.l{left:6px}.hd.r{right:6px}
+.love .e{background:none;width:auto;height:auto;font-size:17px;line-height:1;color:#ff4d8d;top:34px}
+.love .e::before{content:"\2665"}
+.hrt{position:fixed;bottom:-30px;z-index:5;pointer-events:none;animation:rise 6s linear forwards;color:var(--pink)}
+@keyframes rise{to{transform:translateY(-110vh);opacity:0}}
+.cf{position:fixed;top:-14px;width:8px;height:12px;z-index:60;pointer-events:none;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+.cake{display:flex;flex-direction:column;align-items:center;width:240px;margin:30px auto 18px}
+.candles{display:flex;gap:22px}
+.cd{width:9px;height:38px;margin-top:28px;background:repeating-linear-gradient(#fff 0 6px,#ff9ec1 6px 12px);border-radius:3px;position:relative}
+.t2,.t1{position:relative;border-radius:14px 14px 6px 6px}
+.t2{width:140px;height:54px;background:#ffb8d2}
+.t1{width:210px;height:68px;background:#ff8fb8;margin-top:-2px}
+.t2::before,.t1::before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:#fff;border-radius:14px 14px 12px 12px}
+.t1::after{content:"♥";position:absolute;inset:34px 0 0;color:#fff;font-size:1.3rem;line-height:1}
+.plate{width:250px;height:12px;margin-top:2px;background:var(--soft);border-radius:8px}
+.fl{position:absolute;top:-24px;left:-3px;width:14px;height:20px;background:radial-gradient(#fff6a8,#ffb300);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;animation:fk .35s infinite alternate;transition:opacity .4s}
+@keyframes fk{to{transform:scale(1.15,.9) rotate(4deg)}}
+.out .fl{opacity:0}
+.gal{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:20px 8px 30px}
+.pol{flex:0 0 76%;scroll-snap-align:center;background:var(--card);padding:12px 12px 16px;border-radius:6px;box-shadow:var(--sh);transform:rotate(-3deg)}
+.pol:nth-child(even){transform:rotate(3deg)}
+.ph{aspect-ratio:1;background:var(--soft);display:grid;place-items:center;border-radius:4px;overflow:hidden;font-size:2rem}
+.ph img{width:100%;height:100%;object-fit:cover}
+.pol p{margin:12px 0 0;font-size:.95rem}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.rc{perspective:700px;height:120px;cursor:pointer}
+.rc>div{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.rc.f>div{transform:rotateY(180deg)}
+.rc span{position:absolute;inset:0;display:grid;place-items:center;padding:10px;border-radius:16px;backface-visibility:hidden;box-shadow:var(--sh);font-size:.9rem}
+.rc .a{background:var(--pink);color:#fff;font-weight:600}
+.rc .b{background:var(--card);transform:rotateY(180deg)}
+.letter{background:var(--card);border-radius:20px;padding:26px 22px;box-shadow:var(--sh);line-height:1.8;text-align:left}
+.sig{font-family:Pacifico,cursive;color:var(--pink);text-align:right;margin-top:10px}
+#mus{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));right:12px;z-index:70;padding:8px 12px}
+#fin{position:fixed;inset:0;z-index:80;display:none;place-items:center;background:rgba(0,0,0,.55);padding:20px}
+#fin.on{display:grid}
+#fin div{background:var(--card);border-radius:24px;padding:32px 24px;max-width:340px;box-shadow:var(--sh)}
+#fin .big{font-size:3.2rem;animation:bob 1.2s infinite}
+</style>
+</head>
+<body>
+<div id="intro"><div><div class="env">💌</div><p>Something special for you…</p><button id="open">Tap to open</button></div></div>
+<button id="mus" aria-label="Turn music on" aria-pressed="false">🔇</button>
+
+<section>
+  <img class="sticker" src="images/dudu-bubu.gif.gif" alt="Dudu and Bubu">
+  <div class="bears" id="bears">
+    <div class="bw jump"><div class="bear w" id="bubu"><i class="e l"></i><i class="e r"></i><i class="m"></i><i class="n"></i><i class="c l"></i><i class="c r"></i></div><small id="nb"></small></div>
+    <div class="bw"><div class="bear" style="margin-bottom:58px"><i class="e l"></i><i class="e r"></i><i class="m"></i><i class="n"></i><i class="c l"></i><i class="c r"></i><div class="mc"><b></b></div><i class="hd l"></i><i class="hd r"></i></div><small id="nd"></small></div>
+  </div>
+  <h1 id="title"></h1>
+  <p class="sub" id="sub"></p>
+</section>
+
+<section>
+  <h2>Make a wish 🎂</h2>
+  <div class="cake" id="cake">
+    <div class="candles"><div class="cd"><i class="fl"></i></div><div class="cd"><i class="fl"></i></div><div class="cd"><i class="fl"></i></div></div>
+    <div class="t2"></div><div class="t1"></div><div class="plate"></div>
+  </div>
+  <p id="wishmsg">Close your eyes, make a wish, then blow the candles</p>
+  <button id="blow">Blow the candles 💨</button>
+</section>
+
+<section>
+  <h2>Our little memories 📸</h2>
+  <div class="gal" id="gal"></div>
+  <p style="opacity:.7;font-size:.85rem">swipe →</p>
+</section>
+
+<section>
+  <h2>Why I love you 💕</h2>
+  <p style="opacity:.8">tap each card</p>
+  <div class="reasons" id="reasons"></div>
+</section>
+
+<section>
+  <h2>A letter for you 💌</h2>
+  <div class="letter"><div id="letter"></div><div class="sig" id="sig"></div></div>
+  <p><button id="fbtn">One more surprise 🎁</button></p>
+</section>
+
+<div id="fin"><div><div class="big">🎉💖🎂</div><h2 id="ft"></h2><p>I love you today, tomorrow and always.</p><button id="close">Close</button></div></div>
+
+<script>
+// ✏️ EDIT THESE: names, photos (images folder), captions, reasons, letter
+const CFG={
+  her:"Pyaari Bubu", him:"", // her name, your name
+  bubu:"Bubu", dudu:"Dudu", // nicknames under the bears
+  photos:[
+    {src:"images/1-first-call.jpg", cap:"First Call 📞 (result wala din)"},
+    {src:"images/2-first-hand-hold.jpg", cap:"First Hand Hold 🤝 La'fredoz Cafe"},
+    {src:"images/3-first-meet.jpg", cap:"First Meet💕 16 Dec 2024"},
+    {src:"images/4-first-picture.jpg", cap:"First Photo 📸 (Farewell)"}
+  ],
+  caps:["Our favourite day","Silly us","Just you and me","Forever starts here"],
+  reasons:["Apki bachpane wali pyaari aadatein 🧸","'Dudu, mujhe sula de' bolna 🥺","'Dudu, Mujhe kapda dila de','Mujhe huggie chahiye' 🤗","Har baat par ro jana","Apki maturity, Apka bachpana, Apki cute si Smile","Mujhe Bachon ki tarah Laad pyaar karna aur meri sari  zidde poori karna"],
+  letter:"16 December 2024, La'fredoz Cafe, wahi hamari pehli mulaqat thi, aur wahin hamara pehla hand hold bhi. Result wale din tumne mera result poochne ke liye call kiya tha, wahi hamari pehli baat thi call par. Tumhara 'Dudu, mujhe sula do' aur 'Dudu, huggie chahiye' kehna meri sabse pyaari baat hai. Hamne hamesha socha tha ki saath mein birthday celebrate karenge, jo abhi tak nahi ho paya, lekin ye chhota sa page meri taraf se tumhare liye party hai. Tum bachpana bhi ho aur samajhdaari bhi, aur mujhe tumse roz zyada pyaar hota hai. Happy Birthday meri Pyaari Bubu, main hamesha tumhare saath hoon."
+};
+const $=id=>document.getElementById(id);
+$("nb").textContent=CFG.bubu;$("nd").textContent=CFG.dudu;
+$("title").textContent="Happy Birthday, "+CFG.her+"!";
+$("ft").textContent="Happy Birthday, "+CFG.her+"!";
+$("letter").textContent=CFG.letter;
+$("sig").textContent="— Aapka Pyaara Dudu 💖";
+(CFG.photos.length?CFG.photos:CFG.caps.map(c=>({cap:c}))).forEach((p,i)=>{
+  const d=document.createElement("div");d.className="pol";
+  d.innerHTML='<div class="ph">'+(p.src?'<img alt="" src="'+p.src+'">':'📸')+'</div><p>'+(p.cap||CFG.caps[i%CFG.caps.length])+'</p>';
+  $("gal").appendChild(d);
+});
+CFG.reasons.forEach((r,i)=>{
+  const d=document.createElement("div");d.className="rc";
+  d.innerHTML='<div><span class="a">Reason #'+(i+1)+' 💌</span><span class="b"></span></div>';
+  d.querySelector(".b").textContent=r;
+  d.onclick=()=>d.classList.toggle("f");
+  $("reasons").appendChild(d);
+});
+function burst(n){for(let i=0;i<n;i++){const s=document.createElement("i");s.className="cf";
+  s.style.cssText="left:"+Math.random()*100+"vw;background:hsl("+Math.random()*360+" 90% 65%);animation-duration:"+(2+Math.random()*2.5)+"s;animation-delay:"+Math.random()*.6+"s";
+  document.body.appendChild(s);setTimeout(()=>s.remove(),5500);}}
+function heart(){const h=document.createElement("span");h.className="hrt";h.textContent=["💖","💕","🤍","🧸"][Math.floor(Math.random()*4)];
+  h.style.left=Math.random()*100+"vw";h.style.fontSize=(14+Math.random()*18)+"px";document.body.appendChild(h);setTimeout(()=>h.remove(),6000);}
+function type(el,t,i=0){if(i<=t.length){el.textContent=t.slice(0,i);setTimeout(()=>type(el,t,i+1),55)}}
+// music: Happy Birthday via WebAudio
+const N={G4:392,A4:440,B4:494,C5:523,D5:587,E5:659,F5:698,G5:784};
+const SONG="G4:.4 G4:.2 A4:.6 G4:.6 C5:.6 B4:1.2 G4:.4 G4:.2 A4:.6 G4:.6 D5:.6 C5:1.2 G4:.4 G4:.2 G5:.6 E5:.6 C5:.6 B4:.6 A4:1.2 F5:.4 F5:.2 E5:.6 C5:.6 D5:.6 C5:1.4".split(" ").map(x=>x.split(":"));
+let ac,on=false,timer=null;
+const voices=new Set();
+function play(){if(!on)return;ac=ac||new (window.AudioContext||window.webkitAudioContext)();let t=ac.currentTime+.05;
+  SONG.forEach(([n,d])=>{d=+d;const o=ac.createOscillator(),g=ac.createGain();o.type="triangle";o.frequency.value=N[n];
+    g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.15,t+.03);g.gain.exponentialRampToValueAtTime(.001,t+d*.9);
+    o.connect(g).connect(ac.destination);voices.add(o);o.onended=()=>voices.delete(o);o.start(t);o.stop(t+d);t+=d;});
+  timer=setTimeout(play,(t-ac.currentTime+1.5)*1000);}
+function setMusic(v){on=v;$("mus").textContent=v?"🔊":"🔇";$("mus").setAttribute("aria-label",v?"Turn music off":"Turn music on");$("mus").setAttribute("aria-pressed",String(v));clearTimeout(timer);timer=null;
+  if(v)play();else{voices.forEach(o=>o.stop());voices.clear();}}
+$("mus").onclick=()=>setMusic(!on);
+$("open").onclick=()=>{$("intro").classList.add("hide");$("bubu").classList.add("love");burst(70);$("bears").classList.add("hug");
+  type($("sub"),"Today is all about you ✨");setInterval(heart,550);try{setMusic(true)}catch(e){}};
+$("blow").onclick=()=>{$("cake").classList.add("out");$("wishmsg").textContent="Your wish is on its way ✨ I'll make it come true.";burst(90);$("blow").style.display="none";};
+$("fbtn").onclick=()=>{$("fin").classList.add("on");burst(120);};
+$("close").onclick=()=>$("fin").classList.remove("on");
+</script>
+</body>
+</html>
